@@ -41,7 +41,7 @@
 //
 // export default CardItem;
 
-// 
+//
 // const shoename=["Shoe01","Shoe02","Shoe03","Shoe04","Shoe05","Shoe06","Shoe07","Shoe08","Shoe09"];
 // const shoeprice=[2000,3000,1000,1500,6500,8900,4566,1111,2345];
 // var noofproduct = 0;
@@ -158,7 +158,7 @@
 //       `;
 //     $('#repeat').append(templateString);
 // });
-//
+// //
 // $("#pricelh").click(function(){
 //   shoes.sort((a, b) => {
 //     return b.price - a.price;

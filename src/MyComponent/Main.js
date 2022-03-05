@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Card from "./Card.js";
+import $ from 'jquery';
 
 export const Main=()=>{
 
@@ -89,16 +90,75 @@ export const Main=()=>{
       time: "16 Friday"
     }
   ];
-  const list=[];
-  shoes.forEach((i) => {
-      list.push(<Card
-        name={shoes[i].name}
-        price={shoes[i].price}
-        star={shoes[i].star}
-        time={shoes[i].time}
-        image={shoes[i].image}
-      />)
-  })
+
+  let list=[];
+  shoes.forEach((shoe) => {
+        list.push(<Card
+          name={shoe.name}
+          price={shoe.price}
+          star={shoe.star}
+          time={shoe.time}
+          image={shoe.image}
+        />)
+  });
+
+  function handleEvent() {
+    shoes.sort((a, b) => {
+      return b.star - a.star;
+    });
+    $('#repeat').empty();
+    shoes.forEach((shoe) => {
+          list.push(<Card
+            name={shoe.name}
+            price={shoe.price}
+            star={shoe.star}
+            time={shoe.time}
+            image={shoe.image}
+          />)
+    });
+  }
+
+  // $("#pricelh").click(function(){
+  //   shoes.sort((a, b) => {
+  //     return b.price - a.price;
+  //   });
+  //   handleEvent();
+  // });
+  // $("#nameaz").click(function(){
+  //   shoes.sort((a, b) => {
+  //     let fa = a.name.toLowerCase(),
+  //       fb = b.name.toLowerCase();
+  //
+  //     if (fa < fb) {
+  //       return -1;
+  //     }
+  //     if (fa > fb) {
+  //       return 1;
+  //     }
+  //     return 0;
+  //   });
+  //   handleEvent();
+  // });
+  // $("#deltime").click(function(){
+  //   shoes.sort((a, b) => {
+  //     let fa = a.time.toLowerCase(),
+  //       fb = b.time.toLowerCase();
+  //
+  //     if (fa < fb) {
+  //       return -1;
+  //     }
+  //     if (fa > fb) {
+  //       return 1;
+  //     }
+  //     return 0;
+  //   });
+  //   handleEvent();
+  // });
+  // $("#star51").click(function(){
+  //   shoes.sort((a, b) => {
+  //     return b.star - a.star;
+  //   });
+  // });
 
 
   return(
@@ -134,17 +194,18 @@ export const Main=()=>{
                   Sort By
                 </button>
                 <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a className="dropdown-item" id="nameaz" href="#">Name(A-Z)</a>
-                  <a className="dropdown-item" id="pricelh" href="#">Price(high-low)</a>
-                    <a className="dropdown-item" id="deltime" href="#">Delivery Time</a>
-                  <a className="dropdown-item" id="star51" href="#">Star(5-1)</a>
+                  <a className="dropdown-item" onClick={handleEvent} id="pricelh" href="/">Price(high-low)</a>
+                  <a className="dropdown-item" onClick={handleEvent} id="deltime" href="/">Delivery Time</a>
+                  <a className="dropdown-item" onClick={handleEvent} id="nameaz" href="/">Name(A-Z)</a>
+                  <a className="dropdown-item" onClick={handleEvent} id="star51" href="/">Star(5-1)</a>
                 </div>
                 </div>
             </div>
-
-
-            {list}
-
+            <div className="container">
+              <div className="row list" id="repeat">
+              {list}
+            </div>
+            </div>
 
         </div>
     </div>
