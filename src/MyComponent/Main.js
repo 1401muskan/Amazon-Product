@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import Card from "./Card.js";
 
 export const Main=()=>{
@@ -90,6 +89,17 @@ export const Main=()=>{
       time: "16 Friday"
     }
   ];
+  const list=[];
+  shoes.forEach((i) => {
+      list.push(<Card
+        name={shoes[i].name}
+        price={shoes[i].price}
+        star={shoes[i].star}
+        time={shoes[i].time}
+        image={shoes[i].image}
+      />)
+  })
+
 
   return(
     <div>
@@ -133,13 +143,7 @@ export const Main=()=>{
             </div>
 
 
-              <Card
-                name={shoes[2].name}
-                price={shoes[2].price}
-                star={shoes[2].star}
-                time={shoes[2].time}
-                image={shoes[2].image}
-              />
+            {list}
 
 
         </div>

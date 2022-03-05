@@ -1,12 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 function Card(props) {
   return(
-    <div>
+    <div class="container">
+      <div class="row list" id="repeat">
         <div class="col-md-4">
            <div class="card mb-4 shadow-sm" >
-             <img id="shoeimg" src={props.image} class="card-img-top" width="240px" height="150px"></img>
+             <img id="shoeimg" src={props.image} class="card-img-top" width="240px" height="150px" alt=""></img>
              <div class="card-body">
                  <div class="justify-content-between align-items-center">
                    <hr></hr>
@@ -24,6 +24,7 @@ function Card(props) {
              </div>
            </div>
         </div>
+      </div>
     </div>
   )
 }
