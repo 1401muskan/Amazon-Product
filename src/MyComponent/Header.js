@@ -7,7 +7,7 @@ export default function Header(){
       <nav className="navbar navbar-expand-md navbar-dark bg-dark">
       <div className="container-fluid row">
         <div className="col-8 amalogo">
-          <a className="navbar-brand" href="#">
+          <a className="navbar-brand" href="/">
             <img src="/images/logo.png" width="100%" height="30" className="d-inline-block align-top" alt=""></img>
           </a>
         </div>
@@ -17,8 +17,8 @@ export default function Header(){
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-            <a className="nav-link" href="#">Home</a>
-            <a className="nav-link" href="#">Features</a>
+            <a className="nav-link" href="/">Home</a>
+            <a className="nav-link" href="/">Features</a>
             <a className="nav-link" href="#albumm">Products</a>
             </div>
           </div>

@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+// import {BrowserRouter as Router,Route,Routes} from "react-router-dom";
 import Card from "./Card.js";
 
 export const Main=()=>{
@@ -114,13 +115,38 @@ export const Main=()=>{
         />)
   });
 
+  const [searched , setSearched] = useState("");
+  const submit=(e)=>{
+    e.preventDefault();
+    if(!searched){
+      alert("Blank Search");
+    }
+    else{
+      find(searched);
+      setSearched("");
+    }
+  }
+  let foundList=[];
+  const find=(searched)=>{
+    for(let i=0;i<shoes.length;i++) {
+      if((shoes[i].name).toLowerCase() === (searched).toLowerCase()){
+        alert(shoes[i].name);
+      }
+      else
+        {alert("not found");break;}
+    }
+  }
+
+  
+  
   return(
     <div>
         <div className="header shadow heady">
           <h1 className="text-center" >Shoe Company Name</h1>
           <p className="text-center">ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <form className="d-flex">
-            <input className="form-control me-2 searchme" type="search" placeholder="Search" aria-label="Search"></input>
+          
+          <form className="d-flex" onSubmit={submit}>
+            <input className="form-control me-2 searchme" type="search" placeholder="Search" aria-label="Search" value={searched} onChange={(e)=>(setSearched(e.target.value))}></input>
             <button className="btn btn-warning" type="submit" >Search</button>
           </form>
         </div>
