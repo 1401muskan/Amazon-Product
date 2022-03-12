@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Card from "./Card.js";
-import $ from 'jquery';
 
 export const Main=()=>{
 
   const shoes =[
     {
+      id: 1,
       image: "/images/1.png",
       name: "Shoe Name 01",
       price: 1000,
@@ -13,6 +13,7 @@ export const Main=()=>{
       time: "29 Tuesday"
     },
     {
+      id: 2,
       image: "/images/2.png",
       name: "Shoe Name 02",
       price: 1060,
@@ -20,6 +21,7 @@ export const Main=()=>{
       time: "27 Sunday"
     },
     {
+      id: 3,
       image: "/images/3.png",
       name: "Shoe Name 03",
       price: 2000,
@@ -27,6 +29,7 @@ export const Main=()=>{
       time: "28 Monday"
     },
     {
+      id: 4,
       image: "/images/1.png",
       name: "Shoe Name 04",
       price: 4500,
@@ -34,6 +37,7 @@ export const Main=()=>{
       time: "25 Friday"
     },
     {
+      id: 5,
       image: "/images/2.png",
       name: "Shoe Name 05",
       price: 3000,
@@ -41,6 +45,7 @@ export const Main=()=>{
       time: "25 Friday"
     },
     {
+      id: 6,
       image: "/images/3.png",
       name: "Shoe Name 06",
       price: 1000,
@@ -48,6 +53,7 @@ export const Main=()=>{
       time: "28 Monday"
     },
     {
+      id: 7,
       image: "/images/1.png",
       name: "Shoe Name 07",
       price: 876,
@@ -55,6 +61,7 @@ export const Main=()=>{
       time: "28 Monday"
     },
     {
+      id: 8,
       image: "/images/2.png",
       name: "Shoe Name 08",
       price: 1650,
@@ -62,6 +69,7 @@ export const Main=()=>{
       time: "14 Wednesday"
     },
     {
+      id: 9,
       image: "/images/3.png",
       name: "Shoe Name 09",
       price: 2345,
@@ -69,6 +77,7 @@ export const Main=()=>{
       time: "27 Sunday"
     },
     {
+      id: 10,
       image: "/images/1.png",
       name: "Shoe Name 10",
       price: 1260,
@@ -76,6 +85,7 @@ export const Main=()=>{
       time: "26 Saturday"
     },
     {
+      id: 11,
       image: "/images/2.png",
       name: "Shoe Name 11",
       price: 650,
@@ -83,6 +93,7 @@ export const Main=()=>{
       time: "15 Thursday"
     },
     {
+      id: 12,
       image: "/images/3.png",
       name: "Shoe Name 12",
       price: 234,
@@ -94,6 +105,7 @@ export const Main=()=>{
   let list=[];
   shoes.forEach((shoe) => {
         list.push(<Card
+          id={shoe.id}
           name={shoe.name}
           price={shoe.price}
           star={shoe.star}
@@ -101,65 +113,6 @@ export const Main=()=>{
           image={shoe.image}
         />)
   });
-
-  function handleEvent() {
-    shoes.sort((a, b) => {
-      return b.star - a.star;
-    });
-    $('#repeat').empty();
-    shoes.forEach((shoe) => {
-          list.push(<Card
-            name={shoe.name}
-            price={shoe.price}
-            star={shoe.star}
-            time={shoe.time}
-            image={shoe.image}
-          />)
-    });
-  }
-
-  // $("#pricelh").click(function(){
-  //   shoes.sort((a, b) => {
-  //     return b.price - a.price;
-  //   });
-  //   handleEvent();
-  // });
-  // $("#nameaz").click(function(){
-  //   shoes.sort((a, b) => {
-  //     let fa = a.name.toLowerCase(),
-  //       fb = b.name.toLowerCase();
-  //
-  //     if (fa < fb) {
-  //       return -1;
-  //     }
-  //     if (fa > fb) {
-  //       return 1;
-  //     }
-  //     return 0;
-  //   });
-  //   handleEvent();
-  // });
-  // $("#deltime").click(function(){
-  //   shoes.sort((a, b) => {
-  //     let fa = a.time.toLowerCase(),
-  //       fb = b.time.toLowerCase();
-  //
-  //     if (fa < fb) {
-  //       return -1;
-  //     }
-  //     if (fa > fb) {
-  //       return 1;
-  //     }
-  //     return 0;
-  //   });
-  //   handleEvent();
-  // });
-  // $("#star51").click(function(){
-  //   shoes.sort((a, b) => {
-  //     return b.star - a.star;
-  //   });
-  // });
-
 
   return(
     <div>
@@ -170,46 +123,21 @@ export const Main=()=>{
             <input className="form-control me-2 searchme" type="search" placeholder="Search" aria-label="Search"></input>
             <button className="btn btn-warning" type="submit" >Search</button>
           </form>
-      </div>
+        </div>
 
         <div className="album py-5 bg-light" id="albumm">
           <div className="container">
-          <div className="row second">
-            <div className="col-8"><h2 id="totalproduct">12 Products</h2></div>
-            <div className="col-4 menu">
-              <div className="dropdown dpd" id="filterby">
-                <button className="btn btn-light shadow dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                  Filter By
-                </button>
-                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a className="dropdown-item" id="star5" href="#">5 Star</a>
-                  <a className="dropdown-item" id="star4" href="#">4 Star</a>
-                  <a className="dropdown-item" id="star3" href="#">3 Star</a>
-                  <a className="dropdown-item" id="star2" href="#">2 Star</a>
-                  <a className="dropdown-item" id="star1" href="#">1 Star</a>
+            <div className="row second">
+              <div className="col-8"><h2 id="totalproduct">12 Products</h2></div>
+              
+              <div className="container">
+                <div className="row list" id="repeat">
+                  {list}
                 </div>
-                </div>
-                <div className="dropdown dpd" id="sortby">
-                <button className="btn btn-light shadow dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
-                  Sort By
-                </button>
-                <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a className="dropdown-item" onClick={handleEvent} id="pricelh" href="/">Price(high-low)</a>
-                  <a className="dropdown-item" onClick={handleEvent} id="deltime" href="/">Delivery Time</a>
-                  <a className="dropdown-item" onClick={handleEvent} id="nameaz" href="/">Name(A-Z)</a>
-                  <a className="dropdown-item" onClick={handleEvent} id="star51" href="/">Star(5-1)</a>
-                </div>
-                </div>
+              </div>
             </div>
-            <div className="container">
-              <div className="row list" id="repeat">
-              {list}
-            </div>
-            </div>
-
+          </div>
         </div>
     </div>
-  </div>
-</div>
   )
 }

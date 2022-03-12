@@ -4,34 +4,34 @@
 // function CardItem(props) {
 //   return (
 //     <>
-//       // <div class="col-md-4">
-//       //   <div class="card mb-4 shadow-sm" >
-//       //     <img id="shoeimg" src="/images/`+shoes[i].image+`" class="card-img-top" width="240px" height="150px">
-//       //     <div class="card-body">
-//       //     <div class="justify-content-between align-items-center">
+//       // <div className="col-md-4">
+//       //   <div className="card mb-4 shadow-sm" >
+//       //     <img id="shoeimg" src="/images/`+shoes[i].image+`" className="card-img-top" width="240px" height="150px">
+//       //     <div className="card-body">
+//       //     <div className="justify-content-between align-items-center">
 //       //       <hr>
-//       //       <div class="row">
-//       //         <div class="col"><h5 id="shoename" class="card-img-header">`+{props.name}+`</h5><br></br></div>
-//       //         <div class="col"><h6 id="shoestar">★`+{props.star}+`.0</h6></div>
+//       //       <div className="row">
+//       //         <div className="col"><h5 id="shoename" className="card-img-header">`+{props.name}+`</h5><br></br></div>
+//       //         <div className="col"><h6 id="shoestar">★`+{props.star}+`.0</h6></div>
 //       //       </div>
-//       //       <div class="row">
-//       //         <div class="col"><h5 id="shoeprice" class="card-img-sidebar">₹`+{props.price}+`.00</h5><br></br></div>
+//       //       <div className="row">
+//       //         <div className="col"><h5 id="shoeprice" className="card-img-sidebar">₹`+{props.price}+`.00</h5><br></br></div>
 //       //       </div>
-//       //       <div class="row">
-//       //         <div class="col"><h6 id="shoetime" class="card-img-footer text-muted">Delivery by: `+{props.time}+`</h6></div>
+//       //       <div className="row">
+//       //         <div className="col"><h6 id="shoetime" className="card-img-footer text-muted">Delivery by: `+{props.time}+`</h6></div>
 //       //       </div>
 //       //     </div>
 //       //     </div>
 //       //   </div>
 //       // </div>
 //
-//       <li className='cards__item'>
-//         <Link className='cards__item__link' to={props.path}>
-//           <figure className='cards__item__pic-wrap' data-category={props.label}>
-//             <img className='cards__item__img' alt='TravelImage' src={props.src} />
+//       <li classNameName='cards__item'>
+//         <Link classNameName='cards__item__link' to={props.path}>
+//           <figure classNameName='cards__item__pic-wrap' data-category={props.label}>
+//             <img classNameName='cards__item__img' alt='TravelImage' src={props.src} />
 //           </figure>
-//           <div className='cards__item__info'>
-//             <h5 className='cards__item__text'>{props.text}</h5>
+//           <div classNameName='cards__item__info'>
+//             <h5 classNameName='cards__item__text'>{props.text}</h5>
 //           </div>
 //         </Link>
 //       </li>
@@ -135,21 +135,21 @@
 //
 // $.each(shoes, function (i) {
 //     templateString = `
-//       <div class="col-md-4">
-//         <div class="card mb-4 shadow-sm" >
-//           <img id="shoeimg" src="/images/`+shoes[i].image+`" class="card-img-top" width="240px" height="150px">
-//           <div class="card-body">
-//           <div class="justify-content-between align-items-center">
+//       <div className="col-md-4">
+//         <div className="card mb-4 shadow-sm" >
+//           <img id="shoeimg" src="/images/`+shoes[i].image+`" className="card-img-top" width="240px" height="150px">
+//           <div className="card-body">
+//           <div className="justify-content-between align-items-center">
 //             <hr>
-//             <div class="row">
-//               <div class="col"><h5 id="shoename" class="card-img-header">`+shoes[i].name+`</h5><br></div>
-//               <div class="col"><h6 id="shoestar">★`+shoes[i].star+`.0</h6></div>
+//             <div className="row">
+//               <div className="col"><h5 id="shoename" className="card-img-header">`+shoes[i].name+`</h5><br></div>
+//               <div className="col"><h6 id="shoestar">★`+shoes[i].star+`.0</h6></div>
 //             </div>
-//             <div class="row">
-//               <div class="col"><h5 id="shoeprice" class="card-img-sidebar">₹`+shoes[i].price+`.00</h5><br></div>
+//             <div className="row">
+//               <div className="col"><h5 id="shoeprice" className="card-img-sidebar">₹`+shoes[i].price+`.00</h5><br></div>
 //             </div>
-//             <div class="row">
-//               <div class="col"><h6 id="shoetime" class="card-img-footer text-muted">Delivery by: `+shoes[i].time+`</h6></div>
+//             <div className="row">
+//               <div className="col"><h6 id="shoetime" className="card-img-footer text-muted">Delivery by: `+shoes[i].time+`</h6></div>
 //             </div>
 //           </div>
 //           </div>
@@ -207,21 +207,21 @@
 //   $("#totalproduct").text("Products "+noofproduct);
 //   $.each(shoes, function (i) {
 //     var templateString = `
-//     <div class="col-md-4">
-//       <div class="card mb-4 shadow-sm" >
-//         <img id="shoeimg" src="/images/`+shoes[i].image+`" class="card-img-top" width="240px" height="150px">
-//         <div class="card-body">
-//         <div class="justify-content-between align-items-center">
+//     <div className="col-md-4">
+//       <div className="card mb-4 shadow-sm" >
+//         <img id="shoeimg" src="/images/`+shoes[i].image+`" className="card-img-top" width="240px" height="150px">
+//         <div className="card-body">
+//         <div className="justify-content-between align-items-center">
 //           <hr>
-//           <div class="row">
-//             <div class="col"><h5 id="shoename" class="card-img-header">`+shoes[i].name+`</h5><br></div>
-//             <div class="col"><h6 id="shoestar">★`+shoes[i].star+`.0</h6></div>
+//           <div className="row">
+//             <div className="col"><h5 id="shoename" className="card-img-header">`+shoes[i].name+`</h5><br></div>
+//             <div className="col"><h6 id="shoestar">★`+shoes[i].star+`.0</h6></div>
 //           </div>
-//           <div class="row">
-//             <div class="col"><h5 id="shoeprice" class="card-img-sidebar">₹`+shoes[i].price+`.00</h5><br></div>
+//           <div className="row">
+//             <div className="col"><h5 id="shoeprice" className="card-img-sidebar">₹`+shoes[i].price+`.00</h5><br></div>
 //           </div>
-//           <div class="row">
-//             <div class="col"><h6 id="shoetime" class="card-img-footer text-muted">Delivery by: `+shoes[i].time+`</h6></div>
+//           <div className="row">
+//             <div className="col"><h6 id="shoetime" className="card-img-footer text-muted">Delivery by: `+shoes[i].time+`</h6></div>
 //           </div>
 //         </div>
 //         </div>
@@ -284,21 +284,21 @@
 //   $("#totalproduct").text("Products "+noofproduct);
 //   $.each(newstar, function (i) {
 //     templateString = `
-//       <div class="col-md-4">
-//         <div class="card mb-4 shadow-sm" >
-//           <img id="shoeimg" src="/images/`+newstar[i].image+`" class="card-img-top" width="240px" height="150px">
-//           <div class="card-body">
-//           <div class="justify-content-between align-items-center">
+//       <div className="col-md-4">
+//         <div className="card mb-4 shadow-sm" >
+//           <img id="shoeimg" src="/images/`+newstar[i].image+`" className="card-img-top" width="240px" height="150px">
+//           <div className="card-body">
+//           <div className="justify-content-between align-items-center">
 //             <hr>
-//             <div class="row">
-//               <div class="col"><h5 id="shoename" class="card-img-header">`+newstar[i].name+`</h5><br></div>
-//               <div class="col"><h6 id="shoestar">★`+newstar[i].star+`.0</h6></div>
+//             <div className="row">
+//               <div className="col"><h5 id="shoename" className="card-img-header">`+newstar[i].name+`</h5><br></div>
+//               <div className="col"><h6 id="shoestar">★`+newstar[i].star+`.0</h6></div>
 //             </div>
-//             <div class="row">
-//               <div class="col"><h5 id="shoeprice" class="card-img-sidebar">₹`+newstar[i].price+`.00</h5><br></div>
+//             <div className="row">
+//               <div className="col"><h5 id="shoeprice" className="card-img-sidebar">₹`+newstar[i].price+`.00</h5><br></div>
 //             </div>
-//             <div class="row">
-//               <div class="col"><h6 id="shoetime" class="card-img-footer text-muted">Delivery by: `+newstar[i].time+`</h6></div>
+//             <div className="row">
+//               <div className="col"><h6 id="shoetime" className="card-img-footer text-muted">Delivery by: `+newstar[i].time+`</h6></div>
 //             </div>
 //           </div>
 //           </div>
