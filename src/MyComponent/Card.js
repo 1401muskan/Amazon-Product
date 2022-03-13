@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 function Card(props) {
   return(
     <div className="col-md-4">
 
-      {/* <Link to={{pathname: `/checkout/${props.id}`,state: { card: props }}}> */}
-
+      <Link to={{pathname: `/checkout/${props.id}/${props.name}`}}>
          <div className="card mb-4 shadow-sm">
            <img id="shoeimg" src={props.image} className="card-img-top" width="240px" height="150px" alt=""></img>
            <div className="card-body">
@@ -24,7 +25,7 @@ function Card(props) {
                </div>
            </div>
          </div>
-     {/* </Link> */}
+     </Link>
     </div>
   )
 }

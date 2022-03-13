@@ -13,7 +13,7 @@ function App() {
     <Header/>
       <Routes>
         <Route path="/" element={<Main/>} />
-        <Route path="/checkout/:id" element={<Checkout/>} />
+        <Route path="/checkout/:id/:name" element={<Checkout/>} />
       </Routes>
   </Router>
   );
